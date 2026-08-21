@@ -61,3 +61,14 @@ Common JavaScript data types:
 - Null
 - Undefined
 - Object
+
+`typeof` operator can be used to check the data type of a variable.
+
+Example:
+```js
+let number = 5;
+console.log(typeof number); // output: number
+console.log(typeof "ahmed"); // output: string
+```
+Tip: `console.log(typeof null)` will return "object" because null is considered an object in JavaScript. 
+
