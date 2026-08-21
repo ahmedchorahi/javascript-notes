@@ -1,44 +1,63 @@
 # 1. Variables in JavaScript
 
-the main data decration techniques are var, let and const
+The main variable declaration techniques are `var`, `let`, and `const`.
 
-1. const 
-const is a constant variable decration means it can not be changed in the code
+## 1. `const`
+`const` is used to declare a constant variable. Once assigned, its value cannot be changed.
 
-example
+Example:
+```js
 const a = 10;
-    // a = 20;
-    // console.log(a);    // output: Uncaught TypeError: Assignment to constant variable.
+// a = 20;
+// console.log(a); // output: Uncaught TypeError: Assignment to constant variable.
+```
 
-2. let
-let is the variable declatration technique that can be change later in the code
+## 2. `let`
+`let` is used to declare a variable whose value can be changed later.
 
-example
+Example:
+```js
 let a = 10;
 a = 20;
-    // console.log(a);    // output: 20
+// console.log(a); // output: 20
+```
 
-3. var
-var is the old technique of variable declatration that can be change later in the code but it is not block scoped so dont use var its is a old technique of variable decration
+## 3. `var`
+`var` is the old way of declaring variables. It can be changed later, but it is not block-scoped, so it is not recommended to use it.
 
-example
+Example:
+```js
 var a = 10;
 a = 20;
-    // console.log(a);    // output: 20
+// console.log(a); // output: 20
+```
 
+## 4. Declaring a variable without any declaration keyword
+You can also declare a variable without using `var`, `let`, or `const`, but this is not recommended.
 
-4. we can also declare a vailabe without using any declaration techniqe
-
-
-example
+Example:
+```js
 a = 10;
-    // console.log(a);    // output: 10
+// console.log(a); // output: 10
+```
 
-
-
-
-tip: both let and const are block scoped but var is not block scoped so dont use var its is a old technique of variable decration
-
+Tip: `let` and `const` are block-scoped, but `var` is not. So avoid using `var` because it is an older technique.
 
 # 2. Data Types in JavaScript
 
+```js
+let number = 5; // number: range up to 2^53 - 1
+let string = "ahmed"; // string
+let boolean = true; // boolean: true or false
+let empty = null; // null: a standalone value
+let notDefined; // undefined
+let object = { name: "ahmed", age: 20 }; // object
+```
+
+Common JavaScript data types:
+- Number
+- String
+- Boolean
+- Null
+- Undefined
+- Object
