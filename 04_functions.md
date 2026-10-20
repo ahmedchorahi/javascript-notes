@@ -333,3 +333,4 @@ An IIFE is a function that is defined and executed immediately after creation. I
 - Not understanding difference between `var`, `let`, and `const` in scope.
 
 
+why arrow fuction was created if we already have a regular fuction

@@ -1,31 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Muhammad Ahmed Chorahi </h1>
-  <button id="start">start</button>
-  <button id="stop">stop</button>
-</body>
-<script>
-  const addText = ()=>{
-    const h1 = document.createElement('h1')
-    h1.innerHTML="Ahmed"
-    document.querySelector('h1').appendChild(h1)
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
 
-  
-  
-  document.querySelector('#start').addEventListener('click',()=>{
-    const timeout=setInterval(addText, 2000);
-    document.querySelector('#stop').addEventListener('click',()=>{
-    clearTimeout(timeout)
-  })
-  })
-
-  
-</script>
+  </body>
+  <script>
+    const url = 'https://jsonplaceholder.typicode.com/posts/1'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', url)
+    xhr.onreadystatechange= function(){
+      console.log(xhr.readyState)
+      if(xhr.readyState===4){
+        const data = JSON.parse(this.response)
+        console.log(data)
+        console.log(typeof data);
+        console.log(data.title);
+        
+      }
+    }
+    xhr.send()
+  </script>
 </html>
+
+
+index.html?vscode-livepreview=true:16 2
+index.html?vscode-livepreview=true:16 3
+index.html?vscode-livepreview=true:16 4
+index.html?vscode-livepreview=true:19 {userId: 1, id: 1, title: 'sunt aut facere repellat provident occaecati excepturi optio reprehenderit', body: 'quia et suscipit\nsuscipit recusandae consequuntur …strum rerum est autem sunt rem eveniet architecto'}body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"id: 1title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"userId: 1[[Prototype]]: Object
+index.html?vscode-livepreview=true:20 object
+index.html?vscode-livepreview=true:21 sunt aut facere repellat provident occaecati excepturi optio reprehenderit
